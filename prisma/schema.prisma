@@ -14,12 +14,12 @@ datasource db {
 }
 
 model User {
-  uuid       String   @id @default(cuid())
-  id         Int      @unique @default(autoincrement())
-  givenName  String
-  familyName String
-  email      String   @unique
-  password   String
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
+  uuid                 String   @id @default(cuid())
+  givenName            String
+  familyName           String
+  identificationNumber String
+  email                String   @unique
+  password             String
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
 }
